@@ -1,4 +1,6 @@
-<app-child></app-child>
+<app-child (SendMsg) = "MsgVar = $event"></app-child>
+
+<h1>child msg is: {{MsgVar}}</h1>
 
 
 <router-outlet></router-outlet>

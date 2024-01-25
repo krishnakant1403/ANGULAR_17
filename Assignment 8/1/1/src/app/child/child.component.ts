@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -8,9 +9,12 @@ import { Component } from '@angular/core';
 export class ChildComponent {
   inputText: any;
   Dtext:any;
-
+  
+  @Output()
+  public SendMsg = new EventEmitter();
   Send() {
+
     this.Dtext=this.inputText;
-    return this.Dtext;
+      return this.SendMsg.emit(this.Dtext);
     }
 }

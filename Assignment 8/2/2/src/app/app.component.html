@@ -1,0 +1,10 @@
+
+<app-child [Parentmsg]="MsgtoChild" (Sendmsg)="message = $event"></app-child>
+<button (click)="SendmsgtoChild()">Send msg to child</button>
+
+<h1>msg recieve from child is {{message}}</h1>
+
+
+
+
+<router-outlet></router-outlet>
